@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>homework</title>
+    <style>
+      
+      #mainContent {
+        transition: margin-left 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="bg-[#F8F4F0] font-sans overflow-hidden">
+    <div class="relative min-h-screen flex overflow-x-hidden">
+      <aside
+        id="sidebar"
+        class="fixed inset-y-0 left-0 z-50 w-64 bg-[#201F24] text-white transition-transform duration-300 ease-in-out transform -translate-x-full flex flex-col justify-between"
+      >
+        <div class="p-6">
+          <h2
+            class="text-2xl font-bold mb-10 uppercase tracking-widest text-white"
+          >
+            finance
+          </h2>
+          <nav class="space-y-2">
+            <a
+              href="#"
+              class="flex items-center space-x-3 px-4 py-3 bg-[#F8F4F0] text-black rounded-xl font-medium"
+            >
+              <span>Overview</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center space-x-3 px-4 py-3 text-gray-400 hover:bg-gray-800 rounded-xl transition"
+            >
+              <span>Transactions</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center space-x-3 px-4 py-3 text-gray-400 hover:bg-gray-800 rounded-xl transition"
+            >
+              <span>Budgets</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center space-x-3 px-4 py-3 text-gray-400 hover:bg-gray-800 rounded-xl transition"
+            >
+              <span>Pots</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center space-x-3 px-4 py-3 text-gray-400 hover:bg-gray-800 rounded-xl transition"
+            >
+              <span>Recurring Bills</span>
+            </a>
+          </nav>
+        </div>
+
+        <a
+          href="#"
+          id="closeBtn"
+          class="flex items-center space-x-3 px-4 py-6 text-gray-400 hover:bg-gray-800 transition mt-auto border-t border-gray-800"
+        >
+          <svg
+            class="w-6 h-6 rotate-180"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 5l7 7-7 7M5 5l7 7-7 7"
+            />
+          </svg>
+          <span>Minimize menu</span>
+        </a>
+      </aside>
+
+      <main id="mainContent" class="flex-1 p-6 md:p-10">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex items-center gap-4 mb-8">
+            <button
+              id="menuBtn"
+              class="p-2 hover:bg-gray-200 rounded-lg transition-colors cursor-pointer"
+            >
+              <svg
+                class="w-8 h-8 text-[#201F24]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+            <h1 class="text-3xl font-bold text-[#201F24]">Overview</h1>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-[#201F24] text-white p-6 rounded-2xl shadow-sm">
+              <p class="text-sm text-gray-400 mb-2">Current Balance</p>
+              <h2 class="text-3xl font-bold">$4,836.00</h2>
+            </div>
+            <div class="bg-white text-[#201F24] p-6 rounded-2xl shadow-sm">
+              <p class="text-sm text-gray-500 mb-2">Income</p>
+              <h2 class="text-3xl font-bold">$3,814.25</h2>
+            </div>
+            <div class="bg-white text-[#201F24] p-6 rounded-2xl shadow-sm">
+              <p class="text-sm text-gray-500 mb-2">Expenses</p>
+              <h2 class="text-3xl font-bold">$1,700.50</h2>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 space-y-8">
+              <div class="bg-white p-6 rounded-2xl shadow-sm">
+                <div class="flex justify-between items-center mb-6">
+                  <h3 class="text-lg font-bold">Pots</h3>
+                  <a href="#" class="text-sm text-gray-400">See Details</a>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                  <div
+                    class="bg-[#F8F4F0] p-6 rounded-xl flex items-center gap-4 w-full md:w-1/2"
+                  >
+                    <div class="text-2xl">💰</div>
+                    <div>
+                      <p class="text-xs text-gray-500">Total Saved</p>
+                      <p class="text-3xl font-bold">$850</p>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-4 w-full md:w-1/2">
+                    <div class="border-l-4 border-teal-600 pl-3">
+                      <p class="text-[10px] text-gray-400 uppercase">Savings</p>
+                      <p class="font-bold text-sm">$159</p>
+                    </div>
+                    <div class="border-l-4 border-cyan-400 pl-3">
+                      <p class="text-[10px] text-gray-400 uppercase">Gift</p>
+                      <p class="font-bold text-sm">$40</p>
+                    </div>
+                    <div class="border-l-4 border-yellow-500 pl-3">
+                      <p class="text-[10px] text-gray-400 uppercase">
+                        Concert Ticket
+                      </p>
+                      <p class="font-bold text-sm">$110</p>
+                    </div>
+                    <div class="border-l-4 border-orange-400 pl-3">
+                      <p class="text-[10px] text-gray-400 uppercase">
+                        New Laptop
+                      </p>
+                      <p class="font-bold text-sm">$10</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white p-6 rounded-2xl shadow-sm">
+                <div class="flex justify-between items-center mb-6">
+                  <h3 class="text-lg font-bold">Transactions</h3>
+                  <a href="#" class="text-sm text-gray-400">View All</a>
+                </div>
+                <div class="space-y-5">
+                  <div
+                    class="flex justify-between items-center border-b border-gray-50 pb-4"
+                  >
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center"
+                      >
+                        ER
+                      </div>
+                      <div>
+                        <p class="font-bold text-sm">Emma Richardson</p>
+                        <p class="text-xs text-gray-400">19 Aug 2024</p>
+                      </div>
+                    </div>
+                    <p class="font-bold text-green-600">+$75.50</p>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center"
+                      >
+                        SB
+                      </div>
+                      <div>
+                        <p class="font-bold text-sm">Savory Bites Bistro</p>
+                        <p class="text-xs text-gray-400">19 Aug 2024</p>
+                      </div>
+                    </div>
+                    <p class="font-bold text-black">-$55.50</p>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center"
+                      >
+                        DC
+                      </div>
+                      <div>
+                        <p class="font-bold text-sm">Daniel Carter</p>
+                        <p class="text-xs text-gray-400">18 Aug 2024</p>
+                      </div>
+                    </div>
+                    <p class="font-bold text-black">-$42.30</p>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center"
+                      >
+                        SP
+                      </div>
+                      <div>
+                        <p class="font-bold text-sm">SunPark</p>
+                        <p class="text-xs text-gray-400">17 Aug 2024</p>
+                      </div>
+                    </div>
+                    <p class="font-bold text-emerald-700">+$120.00</p>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center"
+                      >
+                        USH
+                      </div>
+                      <div>
+                        <p class="font-bold text-sm">Urban Sevices Hub</p>
+                        <p class="text-xs text-gray-400">17 Aug 2024</p>
+                      </div>
+                    </div>
+                    <p class="font-bold text-black">-$65.50</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-8">
+              <div class="bg-white p-6 rounded-2xl shadow-sm pb-20">
+                <div class="flex justify-between items-center mb-6">
+                  <h3 class="text-lg font-bold">Budgets</h3>
+                  <a href="#" class="text-sm text-gray-400">See Details</a>
+                </div>
+                <div class="flex items-center">
+                  <img src="image copy.png" alt="" />
+
+                  <div class="w-full space-y-4">
+                    <div
+                      class="flex justify-between items-center border-l-4 border-teal-600 pl-4"
+                    >
+                      <p class="text-xs text-gray-500 font-medium">
+                        Entertainment
+                      </p>
+                      <p class="font-bold text-sm text-[#201F24]">$50.00</p>
+                    </div>
+                    <div
+                      class="flex justify-between items-center border-l-4 border-cyan-500 pl-4"
+                    >
+                      <p class="text-xs text-gray-500 font-medium">Bills</p>
+                      <p class="font-bold text-sm text-[#201F24]">$750.00</p>
+                    </div>
+                    <div
+                      class="flex justify-between items-center border-l-4 border-yellow-500 pl-4"
+                    >
+                      <p class="text-xs text-gray-500 font-medium">
+                        Dining Out
+                      </p>
+                      <p class="font-bold text-sm text-[#201F24]">$75.00</p>
+                    </div>
+                    <div
+                      class="flex justify-between items-center border-l-4 border-gray-500 pl-4"
+                    >
+                      <p class="text-xs text-gray-500 font-medium">
+                        Personal Care
+                      </p>
+                      <p class="font-bold text-sm text-[#201F24]">$100.00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white p-6 rounded-2xl shadow-sm">
+                <div class="flex justify-between items-center mb-6">
+                  <h3 class="text-lg font-bold">Recurring Bills</h3>
+                  <a href="#" class="text-sm text-gray-400">See Details</a>
+                </div>
+                <div class="space-y-3">
+                  <div
+                    class="flex justify-between p-4 bg-[#F8F4F0] rounded-xl border-l-4 border-teal-600"
+                  >
+                    <p class="text-xs text-gray-500">Paid Bills</p>
+                    <p class="font-bold text-sm text-[#201F24]">$190.00</p>
+                  </div>
+                  <div
+                    class="flex justify-between p-4 bg-[#F8F4F0] rounded-xl border-l-4 border-yellow-500"
+                  >
+                    <p class="text-xs text-gray-500">Total Upcoming</p>
+                    <p class="font-bold text-sm text-[#201F24]">$194.98</p>
+                  </div>
+                  <div
+                    class="flex justify-between p-4 bg-[#F8F4F0] rounded-xl border-l-4 border-cyan-400"
+                  >
+                    <p class="text-xs text-gray-500">Due Soon</p>
+                    <p class="font-bold text-sm text-[#201F24]">$59.98</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const closeBtn = document.getElementById("closeBtn");
+      const sidebar = document.getElementById("sidebar");
+      const mainContent = document.getElementById("mainContent");
+
+      function toggleMenu(e) {
+        if (e) e.preventDefault();
+
+        
+        sidebar.classList.toggle("-translate-x-full");
+
+        
+        if (window.innerWidth > 1024) {
+          if (mainContent.style.marginLeft === "256px") {
+            mainContent.style.marginLeft = "0px";
+          } else {
+            mainContent.style.marginLeft = "256px";
+          }
+        }
+      }
+
+      menuBtn.addEventListener("click", toggleMenu);
+      closeBtn.addEventListener("click", toggleMenu);
+
+      
+      window.addEventListener("resize", () => {
+        if (window.innerWidth <= 1024) {
+          mainContent.style.marginLeft = "0px";
+        }
+      });
+    </script>
+  </body>
+</html>
